@@ -75,7 +75,7 @@
     ["Sutherland", "Loftus"], ["Loftus", "Engadine"], ["Engadine", "Heathcote"],
     ["Heathcote", "Waterfall"],
     ["Central", "Green Square"], ["Green Square", "Mascot"], ["Mascot", "Domestic Airport"],
-    ["Domestic Airport", "International Airport"],
+    ["Domestic Airport", "International Airport"],["International Airport","Wolli Creek"],
     ["Sydenham", "Marrickville"], ["Marrickville", "Dulwich Hill"], ["Dulwich Hill", "Hurlstone Park"],
     ["Hurlstone Park", "Canterbury"], ["Canterbury", "Campsie"], ["Campsie", "Belmore"],
     ["Belmore", "Lakemba"], ["Lakemba", "Wiley Park"], ["Wiley Park", "Punchbowl"],
