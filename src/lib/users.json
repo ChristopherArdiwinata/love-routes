@@ -1,0 +1,28 @@
+[
+  {
+    "id": "afe07cc1-8da0-4b9e-b8cf-76b9285a023d",
+    "email": "donnkey3@gmail.com",
+    "password": "8cdff7b91508a72508f9c0ee37a5484e6cc52a76b01e4aae1382366a1595d4de2c77c20aae947f7eedd8e8961db9891bc17f2ad6b76050774faf315cdc4ea6c2",
+    "createdAt": "2025-08-30T04:47:04.281Z",
+    "interests": [
+      "Shopping",
+      "History",
+      "Animals"
+    ]
+  },
+  {
+    "id": "dac50511-82cd-4388-b73e-790206a8a964",
+    "name": "dodol",
+    "email": "alifinal@gmail.com",
+    "password": "59736c344fc5a881277b63f9882ea8a0cd1e6ed20eb4a4b647495765fa1e74cc01f86b7dba997014f911dc3a57d5adb4eb005854959ae3acbbff428ab5b10ad4",
+    "age": 22,
+    "gender": "female",
+    "interests": [
+      "Gaming",
+      "Fitness",
+      "History",
+      "Meditation"
+    ],
+    "createdAt": "2025-08-30T13:48:08.225Z"
+  }
+]
