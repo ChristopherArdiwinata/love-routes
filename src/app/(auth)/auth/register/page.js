@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
-
+//hello
 export default function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -40,7 +40,7 @@ export default function Register() {
     <div className="min-h-screen flex items-center justify-center">
       <main className="w-full max-w-md p-8">
         <h1 className="text-3xl font-bold mb-8 text-center">Register</h1>
-        
+
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <input
@@ -78,7 +78,7 @@ export default function Register() {
         )}
 
         <div className="mt-6 text-center">
-          <Link 
+          <Link
             href="/auth/sign-in"
             className="text-blue-600 hover:text-blue-700"
           >
@@ -87,7 +87,7 @@ export default function Register() {
         </div>
 
         <div className="mt-4 text-center">
-          <Link 
+          <Link
             href="/"
             className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
           >
