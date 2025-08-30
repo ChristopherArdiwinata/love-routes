@@ -26,6 +26,7 @@ export default function SignIn() {
 
       if (response.ok) {
         setMessage("Sign in successful!");
+        localStorage.setItem("user", JSON.stringify(data.user));
         setTimeout(() => {
           router.push("/dashboard");
         }, 1000);

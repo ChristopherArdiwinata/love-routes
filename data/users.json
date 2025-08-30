@@ -1,14 +1,19 @@
 [
   {
-    "id": "afe07cc1-8da0-4b9e-b8cf-76b9285a023d",
-    "email": "donnkey3@gmail.com",
-    "password": "8cdff7b91508a72508f9c0ee37a5484e6cc52a76b01e4aae1382366a1595d4de2c77c20aae947f7eedd8e8961db9891bc17f2ad6b76050774faf315cdc4ea6c2",
-    "createdAt": "2025-08-30T04:47:04.281Z"
-  },
-  {
-    "id": "b19d60d4-e06b-493d-af55-0007f0afe61b",
+    "id": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "name": "maaz",
     "email": "maaz@gmail.com",
     "password": "6b775b3620935b0bbb6e7f33862d81f125cb3b38894e226985f53a95d74d914bc9d31a8ed179af1f88977522fa3287b2d4ea1fa191f7f894a62ef036e8dfc23a",
-    "createdAt": "2025-08-30T05:35:00.514Z"
+    "age": 33,
+    "gender": "female",
+    "interests": [
+      "Travel",
+      "Hiking",
+      "Animals",
+      "Volunteering",
+      "Science",
+      "Technology"
+    ],
+    "createdAt": "2025-08-30T15:31:26.698Z"
   }
 ]

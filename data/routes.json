@@ -1,0 +1,128 @@
+[
+  {
+    "id": "b958a9a0-c93a-4fe9-9350-0a851aa46bc1",
+    "userId": "dac50511-82cd-4388-b73e-790206a8a964",
+    "startPoint": "200 Rose St, Darlington NSW 2008, Australia",
+    "destination": "UNSW Sydney, Sydney NSW, Australia",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T14:37:26.133Z",
+    "createdAt": "2025-08-30T14:37:26.431Z"
+  },
+  {
+    "id": "5e71de8d-715c-4446-8f7e-451853f189dc",
+    "userId": "dac50511-82cd-4388-b73e-790206a8a964",
+    "startPoint": "200 Rose St, Darlington NSW 2008, Australia",
+    "destination": "UNSW Sydney, Sydney NSW, Australia",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T14:39:26.123Z",
+    "createdAt": "2025-08-30T14:39:26.386Z"
+  },
+  {
+    "id": "7a3d1fc2-7cda-41b9-9f5e-16e713078006",
+    "userId": "dac50511-82cd-4388-b73e-790206a8a964",
+    "startPoint": "200 Rose St, Darlington NSW 2008, Australia",
+    "destination": "The University of Sydney, Camperdown NSW, Australia",
+    "travelMode": "WALKING",
+    "timestamp": "2025-08-30T14:41:02.276Z",
+    "createdAt": "2025-08-30T14:41:02.552Z"
+  },
+  {
+    "id": "dc694bda-417a-4e59-ae08-7fca1e331fe9",
+    "userId": "dac50511-82cd-4388-b73e-790206a8a964",
+    "startPoint": "200 Rose St, Darlington NSW 2008, Australia",
+    "destination": "UNSW Sydney, Sydney NSW, Australia",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T14:41:21.830Z",
+    "createdAt": "2025-08-30T14:41:22.080Z"
+  },
+  {
+    "id": "69805504-3f04-4b0d-8210-a86ec72695b0",
+    "userId": "dac50511-82cd-4388-b73e-790206a8a964",
+    "startPoint": "200 Rose St, Darlington NSW 2008, Australia",
+    "destination": "UNSW Sydney, Sydney NSW, Australia",
+    "travelMode": "WALKING",
+    "timestamp": "2025-08-30T14:43:09.150Z",
+    "createdAt": "2025-08-30T14:43:09.410Z"
+  },
+  {
+    "id": "4c79da58-20cf-46ad-ab79-6eafbb063873",
+    "userId": "dac50511-82cd-4388-b73e-790206a8a964",
+    "startPoint": "Central Station",
+    "destination": "Hurstville",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T14:44:15.432Z",
+    "createdAt": "2025-08-30T14:44:15.694Z"
+  },
+  {
+    "id": "a6351abe-5188-4d87-a1c8-393217c35c94",
+    "userId": "dac50511-82cd-4388-b73e-790206a8a964",
+    "startPoint": "Central Station",
+    "destination": "Hurstville",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T14:45:34.250Z",
+    "createdAt": "2025-08-30T14:45:34.533Z"
+  },
+  {
+    "id": "5746dc61-98f3-40af-b323-fa7436152747",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Redfern",
+    "destination": "Hurstville",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T15:31:51.782Z",
+    "createdAt": "2025-08-30T15:31:52.260Z"
+  },
+  {
+    "id": "6b2bb83e-51d1-4316-93f4-0622415e01eb",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Redfern",
+    "destination": "Hurstville",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T15:50:02.875Z",
+    "createdAt": "2025-08-30T15:50:03.361Z"
+  },
+  {
+    "id": "e3e55d12-7aa4-4e79-97dd-7d11794237cc",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Lobby, 5/7 Central Ave, Eveleigh NSW 2015, Australia",
+    "destination": "UNSW Sydney, Sydney NSW, Australia",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T15:50:20.122Z",
+    "createdAt": "2025-08-30T15:50:20.594Z"
+  },
+  {
+    "id": "f01519a3-0f60-4a0c-8b9d-a207aa1dfe3a",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Redfern",
+    "destination": "Hurstville",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T15:50:36.079Z",
+    "createdAt": "2025-08-30T15:50:36.577Z"
+  },
+  {
+    "id": "0bf3bbd6-8485-4bcd-8684-e6a111ff4aac",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Redfern",
+    "destination": "Hurstville",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T15:50:46.358Z",
+    "createdAt": "2025-08-30T15:50:46.842Z"
+  },
+  {
+    "id": "ae1618a1-b0a2-4554-96f9-b1321b06637b",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Redfern",
+    "destination": "Hurstville",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T15:51:31.957Z",
+    "createdAt": "2025-08-30T15:51:32.431Z"
+  },
+  {
+    "id": "6dd98eda-ad1f-439f-9f5c-6f7c478f0679",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Redfern",
+    "destination": "Hurstville",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T15:56:48.424Z",
+    "createdAt": "2025-08-30T15:56:48.905Z"
+  }
+]

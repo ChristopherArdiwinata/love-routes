@@ -1,13 +1,18 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 //hello
 export default function Register() {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [age, setAge] = useState("");
+  const [gender, setGender] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,15 +23,18 @@ export default function Register() {
       const response = await fetch("/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ name, email, password, age, gender }),
       });
 
       const data = await response.json();
 
       if (response.ok) {
         setMessage("Registration successful!");
-        setEmail("");
-        setPassword("");
+        // Store user data in localStorage and redirect to settings
+        localStorage.setItem("user", JSON.stringify(data.user));
+        setTimeout(() => {
+          router.push("/settings");
+        }, 1000);
       } else {
         setMessage(data.error || "Registration failed");
       }
@@ -52,6 +60,16 @@ export default function Register() {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <input
+              type="text"
+              placeholder="Full Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+            />
+          </div>
+          <div>
+            <input
               type="email"
               placeholder="Email"
               value={email}
@@ -71,6 +89,31 @@ export default function Register() {
               //className="w-full px-0 py-4 text-gray-900 placeholder-gray-400 border-0 border-b border-gray-200 bg-transparent focus:border-gray-900 focus:outline-none transition-colors duration-200"
               className="w-full px-6 py-4 border-2 border-gray-400 rounded-2xl focus:ring-1 focus:ring-gray-400 focus:border-gray-400 focus:outline-none transition-all duration-200 font-semibold"
             />
+          </div>
+          <div>
+            <input
+              type="number"
+              placeholder="Age"
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
+              required
+              min="18"
+              max="100"
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+            />
+          </div>
+          <div>
+            <select
+              value={gender}
+              onChange={(e) => setGender(e.target.value)}
+              required
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white"
+            >
+              <option value="">Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
           </div>
           <button
             type="submit"

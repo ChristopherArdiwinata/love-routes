@@ -205,9 +205,9 @@ const MapRouteSearch = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [routeInfo, setRouteInfo] = useState(null);
-  const [travelMode, setTravelMode] = useState("WALKING");
+  const [travelMode, setTravelMode] = useState("TRANSIT");
 
-  //here123
+  //may not be needed
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   /* const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -308,11 +308,16 @@ const MapRouteSearch = () => {
         avoidHighways: false,
         avoidTolls: false,
       };
-
-      directionsService.route(request, (result, status) => {
+      let temp = await getTransitRoute(origin, destination);
+      let tempOrigin = temp.firstTrainStation || origin;
+      let tempDestination = temp.lastTrainStation || destination;
+      directionsService.route(request, async (result, status) => {
         if (status === "OK") {
           directionsRenderer.setDirections(result);
           updateRouteInfo(result);
+
+          // Send route data to backend
+          await sendRouteToBackend(tempOrigin, tempDestination);
         } else {
           setError(`Could not calculate route: ${status}`);
         }
@@ -352,6 +357,55 @@ const MapRouteSearch = () => {
     setOrigin(destination);
     setDestination(temp);
   };
+  async function getTransitRoute(origin, destination) {
+    try {
+      const url = `/api/transit-route?origin=${encodeURIComponent(
+        origin
+      )}&destination=${encodeURIComponent(destination)}`;
+
+      const response = await fetch(url);
+      const data = await response.json();
+
+      if (data.error) {
+        console.error("Transit route API error:", data.error);
+        return { firstTrainStation: null, lastTrainStation: null };
+      }
+
+      console.log("Train stations:", data);
+      return data;
+    } catch (error) {
+      console.error("Error in getTransitRoute:", error);
+      return { firstTrainStation: null, lastTrainStation: null };
+    }
+  }
+
+  // Send route data to backend ( will be receiving an obj back with list of users and their match percentage)
+  // THIS IS CRUCIAL....
+  const sendRouteToBackend = async (startPoint, destinationPoint) => {
+    try {
+      const user = JSON.parse(localStorage.getItem("user") || "{}");
+
+      const routeData = {
+        userId: user.id,
+        startPoint: startPoint,
+        destination: destinationPoint,
+        travelMode: travelMode,
+        timestamp: new Date().toISOString(),
+      };
+
+      const response = await fetch("/api/routes", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(routeData),
+      });
+
+      if (!response.ok) {
+        console.error("Failed to save route to backend");
+      }
+    } catch (error) {
+      console.error("Error sending route to backend:", error);
+    }
+  };
 
   const getCurrentLocation = () => {
     if (navigator.geolocation) {
@@ -384,6 +438,7 @@ const MapRouteSearch = () => {
 
   return (
     <div>
+      //floating nameee
       <div className="fixed z-50">
         <Link
           href="/dashboard"
@@ -394,6 +449,7 @@ const MapRouteSearch = () => {
           </span>
         </Link>
       </div>
+      //headerrrr
       <header className="bg-yellow border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -550,7 +606,7 @@ const MapRouteSearch = () => {
           )}
         </div>
       </header>
-
+      {/* map and allat */}
       <div className="w-full max-w-7xl mx-auto p-4">
         {/* this a big map */}
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
@@ -624,6 +680,7 @@ const MapRouteSearch = () => {
               </button>
             </div>
 
+            {/* filler */}
             <section className="py-16 bg-gray-50">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
