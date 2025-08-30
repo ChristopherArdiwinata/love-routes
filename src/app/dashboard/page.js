@@ -20,6 +20,7 @@ import {
   Star,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 /**
  *
@@ -438,18 +439,25 @@ const MapRouteSearch = () => {
 
   return (
     <div>
-      //floating nameee
-      <div className="fixed z-50">
+      {/* floating nameee */}
+      <div
+        style={{ backgroundColor: "#FFC14F" }}
+        className="fixed border-b-3 border-r-3 border-black-500 z-50"
+      >
         <Link
           href="/dashboard"
-          className="flex items-center space-x-2 bg-white/90 backdrop-blur-sm px-4 py-2 transition-all duration-200"
+          className="flex items-center space-x-2  backdrop-blur-sm px-4 py-2 transition-all duration-200"
         >
-          <span className="font-bold text-gray-900 text-sm">
-            Love Routes123
-          </span>
+          <Image
+            src="/commutuals-img-compressed.png" // Image in public folder
+            alt="Logo"
+            width={100}
+            height={100}
+            className="mx-auto mb-4"
+          />
         </Link>
       </div>
-      //headerrrr
+      {/* headerrrr */}
       <header className="bg-yellow border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
