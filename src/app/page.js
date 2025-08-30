@@ -7,24 +7,24 @@ export default function Home() {
       <main className="text-center">
         <div className="text-center mb-12">
           <img
-            src="/general-img-landscape.png"
+            src="/commutuals-img.png"
             alt="Love Routes Logo"
             className="w-34 h-34 mx-auto mb-8 rounded-lg"
           />
-          <p className="text-gray-500 font-serif text-sm">
+          <p className="text-black-500 font-serif text-4xl">
             Welcome to Love Routes!
           </p>
         </div>
         <div className="flex gap-4 justify-center">
           <Link
             href="/auth/sign-in"
-            className="border-2 border-gray-600 text-gray-600 hover:text-gray-800 hover:bg-gray-50 font-medium py-2 px-4 rounded transition duration-200 ml-auto block"
+            className="border-2 border-gray-600 text-gray-600 hover:text-gray-800 hover:bg-gray-50 font-medium py-2 px-4 rounded-2xl transition duration-200 block"
           >
             Sign In
           </Link>
           <Link
             href="/auth/register"
-            className="border-2 border-gray-600 text-gray-600 hover:text-gray-800 hover:bg-gray-50 font-medium py-2 px-4 rounded transition duration-200 ml-auto block"
+            className="border-2 border-gray-600 text-gray-600 hover:text-gray-800 hover:bg-gray-50 font-medium py-2 px-4 rounded-2xl transition duration-200 block"
           >
             Register
           </Link>

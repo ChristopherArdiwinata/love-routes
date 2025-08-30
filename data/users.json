@@ -15,5 +15,25 @@
       "Technology"
     ],
     "createdAt": "2025-08-30T15:31:26.698Z"
+  },
+  {
+    "id": "79a6f866-8fac-4f05-9791-7aa7518c17e7",
+    "name": "Maaz",
+    "email": "maaz1@gmail.com",
+    "password": "6b775b3620935b0bbb6e7f33862d81f125cb3b38894e226985f53a95d74d914bc9d31a8ed179af1f88977522fa3287b2d4ea1fa191f7f894a62ef036e8dfc23a",
+    "age": 21,
+    "gender": "male",
+    "interests": [],
+    "createdAt": "2025-08-30T18:32:29.032Z"
+  },
+  {
+    "id": "75bf2400-7b52-4070-a89c-970e1245972f",
+    "name": "mz",
+    "email": "maaz3@gmail.com",
+    "password": "6b775b3620935b0bbb6e7f33862d81f125cb3b38894e226985f53a95d74d914bc9d31a8ed179af1f88977522fa3287b2d4ea1fa191f7f894a62ef036e8dfc23a",
+    "age": 18,
+    "gender": "male",
+    "interests": [],
+    "createdAt": "2025-08-30T19:29:12.195Z"
   }
 ]

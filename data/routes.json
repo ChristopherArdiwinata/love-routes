@@ -133,5 +133,131 @@
     "travelMode": "TRANSIT",
     "timestamp": "2025-08-30T16:11:24.260Z",
     "createdAt": "2025-08-30T16:11:25.066Z"
+  },
+  {
+    "id": "54c3f799-19d0-4310-b60e-2aff2c569540",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Lobby, 5/7 Central Ave, Eveleigh NSW 2015, Australia",
+    "destination": "UNSW Sydney, Sydney NSW, Australia",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T17:11:02.016Z",
+    "createdAt": "2025-08-30T17:11:02.577Z"
+  },
+  {
+    "id": "4d1b6473-83ca-417b-aee4-3a4d49e4d2a2",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Lobby, 5/7 Central Ave, Eveleigh NSW 2015, Australia",
+    "destination": "Redfern NSW, Australia",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T17:11:21.186Z",
+    "createdAt": "2025-08-30T17:11:21.750Z"
+  },
+  {
+    "id": "8987a6b4-089e-498a-8d4e-0e0c02148a90",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Lobby, 5/7 Central Ave, Eveleigh NSW 2015, Australia",
+    "destination": "Central Station, Eddy Avenue, Haymarket NSW, Australia",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T17:11:46.112Z",
+    "createdAt": "2025-08-30T17:11:46.655Z"
+  },
+  {
+    "id": "5e3eee7b-d8c1-481e-a5ee-9ce59b304c8a",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Redfern",
+    "destination": "Hurstville",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T17:11:54.841Z",
+    "createdAt": "2025-08-30T17:11:55.382Z"
+  },
+  {
+    "id": "b8b0b20e-38b2-4a2c-b83f-79b0322418ac",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Lobby, 5/7 Central Ave, Eveleigh NSW 2015, Australia",
+    "destination": "UNSW Sydney, Sydney NSW, Australia",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T17:12:15.171Z",
+    "createdAt": "2025-08-30T17:12:15.733Z"
+  },
+  {
+    "id": "9d4454e0-7a5b-40cb-89c4-c509641f5a96",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Hurstville",
+    "destination": "Central Station",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T17:12:37.656Z",
+    "createdAt": "2025-08-30T17:12:38.212Z"
+  },
+  {
+    "id": "9ca096e6-00f8-4b6a-9582-d35c8bdc90af",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "200 Rose Street, Darlington NSW, Australia",
+    "destination": "UNSW Sydney, Sydney NSW, Australia",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T17:13:08.269Z",
+    "createdAt": "2025-08-30T17:13:08.836Z"
+  },
+  {
+    "id": "fca911ea-a64b-4c7b-b92f-834fdd0deee3",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "200 Rose Street, Darlington NSW, Australia",
+    "destination": "UNSW Sydney, Sydney NSW, Australia",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T17:13:14.253Z",
+    "createdAt": "2025-08-30T17:13:14.791Z"
+  },
+  {
+    "id": "37e1b338-ac53-4c9e-8f83-754a80c13f66",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "200 Rose Street, Darlington NSW, Australia",
+    "destination": "School of the Arts & Media, UNSW Sydney, Kensington NSW, Australia",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T17:14:33.948Z",
+    "createdAt": "2025-08-30T17:14:34.505Z"
+  },
+  {
+    "id": "ba4eb8ae-1c06-4409-87d5-2ceb7dec08c5",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Redfern",
+    "destination": "Hurstville",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T17:15:19.713Z",
+    "createdAt": "2025-08-30T17:15:20.255Z"
+  },
+  {
+    "id": "ce00b90a-7cb9-4236-a43b-49d3ba9c454a",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Lobby, 5/7 Central Ave, Eveleigh NSW 2015, Australia",
+    "destination": "Haymarket NSW, Australia",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T19:22:34.121Z",
+    "createdAt": "2025-08-30T19:22:34.721Z"
+  },
+  {
+    "id": "6ca6982b-7ae8-4137-9cc4-af6dac6f07f0",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Lobby, 5/7 Central Ave, Eveleigh NSW 2015, Australia",
+    "destination": "Haymarket NSW, Australia",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T19:22:51.872Z",
+    "createdAt": "2025-08-30T19:22:52.535Z"
+  },
+  {
+    "id": "19879a5e-ac8f-4f5f-b36a-9cf4e95a56a0",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Lobby, 5/7 Central Ave, Eveleigh NSW 2015, Australia",
+    "destination": "Darling Harbour, Sydney NSW, Australia",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T19:23:55.081Z",
+    "createdAt": "2025-08-30T19:23:55.644Z"
+  },
+  {
+    "id": "6c89fd17-4168-4a94-8ef7-d4008e9a853f",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Redfern",
+    "destination": "Sydney Domestic Airport Station",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T19:24:11.616Z",
+    "createdAt": "2025-08-30T19:24:12.185Z"
   }
 ]

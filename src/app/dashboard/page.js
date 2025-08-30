@@ -55,6 +55,7 @@ const AutocompleteInput = ({
   onSelect,
   autocompleteService,
   sessionToken,
+  className = "",
 }) => {
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -449,180 +450,67 @@ const MapRouteSearch = () => {
           className="flex items-center space-x-2  backdrop-blur-sm px-4 py-2 transition-all duration-200"
         >
           <Image
-            src="/commutuals-img-compressed.png" // Image in public folder
+            src="/commutuals-img-cropped.png"
             alt="Logo"
             width={100}
             height={100}
-            className="mx-auto mb-4"
+            className="mx-auto mb-2 mr-2"
           />
         </Link>
       </div>
       {/* headerrrr */}
-      <header className="bg-yellow border-b border-gray-200 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <header className="bg-white">
+        <div className="max-w-1xl mx-auto px-4 sm:px-9 lg:px-8 h-17">
           <div className="flex justify-between items-center h-16">
-            {/* Empty space where logo would be - logo is now fixed separately */}
+            {/* Empty space for logo no remove */}
             <div className="w-40"></div>
 
             <nav className="hidden md:flex space-x-8">
               <Link
                 href="/dashboard"
-                className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-black-600 hover:text-gray-700 hover:underline cursor-pointer px-6 py-2 rounded-md text-xl font-medium transition-colors"
               >
                 Dashboard
               </Link>
               <Link
                 href="/dashboard/routes"
-                className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-black-600 hover:text-gray-700 hover:underline cursor-pointer px-6 py-2 rounded-md text-xl font-medium transition-colors"
               >
                 My Routes
               </Link>
+
               <Link
-                href="/dashboard/favorites"
-                className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                Favorites
-              </Link>
-              <Link
-                href="/dashboard/settings"
-                className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                href="/settings"
+                className="text-black-600 hover:text-gray-700 hover:underline cursor-pointer px-6 py-2 rounded-md text-xl font-medium transition-colors"
               >
                 Settings
               </Link>
             </nav>
 
-            {/* Right side - Profile and Menu */}
+            {/* Right side*/}
             <div className="flex items-center space-x-4">
-              {/* Notifications */}
-              <button className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-colors">
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 17h5l-3.5-3.5a11.95 11.95 0 0 0 0-8L21 2H9a11.95 11.95 0 0 0 0-8L5.5 13.5 9 17h6z"
-                  />
-                </svg>
-              </button>
-
-              {/* Profile Dropdown */}
               <div className="relative">
-                <button
-                  onClick={() => setIsProfileOpen(!isProfileOpen)}
-                  className="flex items-center space-x-2 p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
+                <Link
+                  href="/"
+                  className="text-black-600 hover:text-gray-700 hover:underline cursor-pointer px-6 py-2 rounded-md text-xl font-medium transition-colors"
                 >
-                  <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
-                    <span className="text-sm font-medium text-gray-700">
-                      JD
-                    </span>
-                  </div>
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
-
-                {/* Profile Dropdown Menu */}
-                {isProfileOpen && (
-                  <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                    <Link
-                      href="/dashboard/profile"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
-                    >
-                      Profile Settings
-                    </Link>
-                    <Link
-                      href="/dashboard/account"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
-                    >
-                      Account
-                    </Link>
-                    <hr className="my-2 border-gray-200" />
-                    <button className="block w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50 transition-colors">
-                      Sign Out
-                    </button>
-                  </div>
-                )}
+                  Sign Out
+                </Link>
               </div>
-
-              {/* Mobile menu button */}
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="md:hidden p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
-              >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              </button>
             </div>
           </div>
-
-          {/* Mobile Navigation */}
-          {isMenuOpen && (
-            <div className="md:hidden border-t border-gray-200 py-4">
-              <div className="space-y-2">
-                <Link
-                  href="/dashboard"
-                  className="block px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors"
-                >
-                  Dashboard
-                </Link>
-                <Link
-                  href="/dashboard/routes"
-                  className="block px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors"
-                >
-                  My Routes
-                </Link>
-                <Link
-                  href="/dashboard/favorites"
-                  className="block px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors"
-                >
-                  Favorites
-                </Link>
-                <Link
-                  href="/dashboard/settings"
-                  className="block px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors"
-                >
-                  Settings
-                </Link>
-              </div>
-            </div>
-          )}
         </div>
       </header>
+
       {/* map and allat */}
       <div className="w-full max-w-7xl mx-auto p-4">
         {/* this a big map */}
-        <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div className="bg-white rounded-3xl overflow-hidden">
           <div className="relative">
             <div ref={mapRef} className="w-full h-96 lg:h-[600px]" />
           </div>
 
-          <div className="p-6 bg-gray-50 border-b">
+          <div className="p-6">
             <div className="grid grid-cols-10 gap-6 mb-6 items-stretch">
               <div className="col-span-4">
                 <AutocompleteInput
@@ -679,352 +567,318 @@ const MapRouteSearch = () => {
                 ⇄ Swap
               </button>
 
-              <button
+              {/* <button
                 onClick={clearRoute}
                 className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-medium transition-all flex items-center space-x-2"
               >
                 <X className="h-4 w-4" />
                 <span>Clear</span>
-              </button>
+              </button> */}
             </div>
-
-            {/* filler */}
-            <section className="py-16 bg-gray-50">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                    How It Works
-                  </h2>
-                  <p className="text-lg text-gray-600">
-                    Making friends on your journey has never been easier
-                  </p>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  <div className="text-center">
-                    <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <MapPin className="w-8 h-8 text-blue-600" />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2">
-                      1. Enter Your Route
-                    </h3>
-                    <p className="text-gray-600">
-                      Tell us where you're traveling from and to. We'll find
-                      others on the same journey.
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Users className="w-8 h-8 text-green-600" />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2">
-                      2. Find Travel Buddies
-                    </h3>
-                    <p className="text-gray-600">
-                      Browse profiles of fellow travelers on your route and
-                      connect with like-minded people.
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <MessageCircle className="w-8 h-8 text-purple-600" />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2">
-                      3. Start Chatting
-                    </h3>
-                    <p className="text-gray-600">
-                      Break the ice with a message and turn your solo journey
-                      into a social adventure.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Features Section */}
-            <section className="py-16 bg-white">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                    Why Choose TrainConnect?
-                  </h2>
-                  <p className="text-lg text-gray-600">
-                    The safest and most fun way to meet people while traveling
-                  </p>
-                </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                  <div>
-                    <div className="space-y-8">
-                      <div className="flex items-start space-x-4">
-                        <div className="bg-blue-100 p-2 rounded-lg">
-                          <Shield className="w-6 h-6 text-blue-600" />
-                        </div>
-                        <div>
-                          <h3 className="text-xl font-semibold mb-2">
-                            Verified Profiles
-                          </h3>
-                          <p className="text-gray-600">
-                            All users are verified through ticket validation to
-                            ensure you're meeting real travelers.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-4">
-                        <div className="bg-green-100 p-2 rounded-lg">
-                          <Clock className="w-6 h-6 text-green-600" />
-                        </div>
-                        <div>
-                          <h3 className="text-xl font-semibold mb-2">
-                            Real-Time Matching
-                          </h3>
-                          <p className="text-gray-600">
-                            Connect with people on the same train, same day. No
-                            more awkward small talk with strangers.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-4">
-                        <div className="bg-purple-100 p-2 rounded-lg">
-                          <Heart className="w-6 h-6 text-purple-600" />
-                        </div>
-                        <div>
-                          <h3 className="text-xl font-semibold mb-2">
-                            Interest-Based Matching
-                          </h3>
-                          <p className="text-gray-600">
-                            Find people who share your hobbies, work in similar
-                            fields, or just love good conversation.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="bg-gray-100 rounded-2xl p-8 text-center">
-                    <Train className="w-24 h-24 text-blue-600 mx-auto mb-4" />
-                    <h3 className="text-2xl font-bold mb-4">
-                      Turn Travel Time Into Social Time
-                    </h3>
-                    <p className="text-gray-600 mb-6">
-                      Whether it's a 2-hour commute or a cross-country
-                      adventure, make every journey memorable.
-                    </p>
-                    <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-all">
-                      Start Your Journey
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Success Stories Section */}
-            <section className="py-16 bg-blue-50">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                    Success Stories
-                  </h2>
-                  <p className="text-lg text-gray-600">
-                    Real connections made on real journeys
-                  </p>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  <div className="bg-white p-6 rounded-xl shadow-md">
-                    <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                        <User className="w-6 h-6 text-blue-600" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold">Sarah & Mike</h4>
-                        <p className="text-sm text-gray-500">
-                          London → Edinburgh
-                        </p>
-                      </div>
-                    </div>
-                    <p className="text-gray-600">
-                      "Met on the 8 AM train and ended up talking the entire
-                      4.5-hour journey. Now we're planning our next adventure
-                      together!"
-                    </p>
-                  </div>
-                  <div className="bg-white p-6 rounded-xl shadow-md">
-                    <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                        <User className="w-6 h-6 text-green-600" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold">James</h4>
-                        <p className="text-sm text-gray-500">Daily Commuter</p>
-                      </div>
-                    </div>
-                    <p className="text-gray-600">
-                      "Turned my boring daily commute into the best part of my
-                      day. Made 3 close friends in my first month!"
-                    </p>
-                  </div>
-                  <div className="bg-white p-6 rounded-xl shadow-md">
-                    <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                        <User className="w-6 h-6 text-purple-600" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold">Emma & Lisa</h4>
-                        <p className="text-sm text-gray-500">
-                          Manchester → London
-                        </p>
-                      </div>
-                    </div>
-                    <p className="text-gray-600">
-                      "Both traveling for job interviews, we helped each other
-                      prepare and both got the jobs. Best travel companion
-                      ever!"
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Safety Section */}
-            <section className="py-16 bg-white">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                    Your Safety Comes First
-                  </h2>
-                  <p className="text-lg text-gray-600">
-                    Built with comprehensive safety features for worry-free
-                    connections
-                  </p>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  <div className="text-center p-6 border border-gray-200 rounded-xl">
-                    <div className="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Shield className="w-6 h-6 text-red-600" />
-                    </div>
-                    <h3 className="font-semibold mb-2">ID Verification</h3>
-                    <p className="text-sm text-gray-600">
-                      All users verified with official ID and train tickets
-                    </p>
-                  </div>
-                  <div className="text-center p-6 border border-gray-200 rounded-xl">
-                    <div className="bg-yellow-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <AlertTriangle className="w-6 h-6 text-yellow-600" />
-                    </div>
-                    <h3 className="font-semibold mb-2">Report System</h3>
-                    <p className="text-sm text-gray-600">
-                      Easy reporting and blocking features for uncomfortable
-                      situations
-                    </p>
-                  </div>
-                  <div className="text-center p-6 border border-gray-200 rounded-xl">
-                    <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Eye className="w-6 h-6 text-green-600" />
-                    </div>
-                    <h3 className="font-semibold mb-2">Profile Moderation</h3>
-                    <p className="text-sm text-gray-600">
-                      24/7 moderation team reviewing profiles and messages
-                    </p>
-                  </div>
-                  <div className="text-center p-6 border border-gray-200 rounded-xl">
-                    <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <MessageCircle className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <h3 className="font-semibold mb-2">Safe Messaging</h3>
-                    <p className="text-sm text-gray-600">
-                      In-app messaging keeps personal info private until you're
-                      ready
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* CTA Section */}
-            <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-              <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 className="text-4xl font-bold mb-4">
-                  Ready to Transform Your Journey?
-                </h2>
-                <p className="text-xl mb-8 text-blue-100">
-                  Join thousands of travelers who've turned their trips into
-                  adventures
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all">
-                    Sign Up Free
-                  </button>
-                  <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-all">
-                    Learn More
-                  </button>
-                </div>
-                <div className="mt-8 flex items-center justify-center space-x-8 text-blue-100">
-                  <div className="flex items-center space-x-2">
-                    <Users className="w-5 h-5" />
-                    <span>10,000+ Members</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Star className="w-5 h-5" />
-                    <span>4.8/5 Rating</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <MessageCircle className="w-5 h-5" />
-                    <span>50,000+ Connections</span>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {error && (
-              <div className="mt-4 p-4 bg-red-50 border-l-4 border-red-400 rounded-lg">
-                <div className="flex">
-                  <div className="text-red-700">
-                    <strong>Error:</strong> {error}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {routeInfo && (
-              <div className="mt-6 bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-                <h3 className="font-bold text-gray-900 mb-4 flex items-center">
-                  <Route className="h-5 w-5 mr-2 text-blue-600" />
-                  Route Information
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                  <div className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg">
-                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                      <span className="text-blue-600 font-bold text-sm">
-                        📏
-                      </span>
-                    </div>
-                    <div>
-                      <div className="text-sm text-gray-600">Distance</div>
-                      <div className="font-semibold text-gray-900">
-                        {routeInfo.distance}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
-                    <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                      <Clock className="h-4 w-4 text-green-600" />
-                    </div>
-                    <div>
-                      <div className="text-sm text-gray-600">Duration</div>
-                      <div className="font-semibold text-gray-900">
-                        {routeInfo.duration}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="space-y-2 text-sm text-gray-600">
-                  <div>
-                    <strong>From:</strong> {routeInfo.startAddress}
-                  </div>
-                  <div>
-                    <strong>To:</strong> {routeInfo.endAddress}
-                  </div>
-                </div>
-              </div>
-            )}
           </div>
+
+          {routeInfo && (
+            <div className="mt-6 p-16">
+              <h3 className="font-bold font-xl text-black-900 mb-4 flex items-center">
+                <Route className="h-5 w-5 mr-2 text-blue-600" />
+                Route Information
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg">
+                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                    <span className="text-blue-600 font-bold text-sm">📏</span>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600">Distance</div>
+                    <div className="font-semibold text-gray-900">
+                      {routeInfo.distance}
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                    <Clock className="h-4 w-4 text-green-600" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600">Duration</div>
+                    <div className="font-semibold text-gray-900">
+                      {routeInfo.duration}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-2 text-sm text-gray-600">
+                <div>
+                  <strong>From:</strong> {routeInfo.startAddress}
+                </div>
+                <div>
+                  <strong>To:</strong> {routeInfo.endAddress}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* filler */}
+          <section
+            style={{ backgroundColor: "#F66E44" }}
+            className="py-40 mt-4"
+          >
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-12">
+                <h2 className="text-7xl font-bold text-black-900 mb-4">
+                  How It Works
+                </h2>
+                <p className="text-lg text-black-600">
+                  Making friends on your journey has never been easier
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <MapPin className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">
+                    1. Enter Your Route
+                  </h3>
+                  <p className="text-black-600">
+                    Tell us where you're traveling from and to. We'll find
+                    others on the same journey.
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-8 h-8 text-green-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">
+                    2. Find Commutuals
+                  </h3>
+                  <p className="text-black-600">
+                    Browse profiles of fellow travelers on your route and
+                    connect with like-minded people.
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <MessageCircle className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">3. Start Chatting</h3>
+                  <p className="text-black-600">
+                    Break the ice with a message and turn your solo journey into
+                    a social adventure.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Features Section */}
+          <section className="py-16 bg-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  Why Choose Commutuals?
+                </h2>
+                <p className="text-lg text-gray-700">
+                  The safest and most fun way to meet people while traveling
+                </p>
+              </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <div className="space-y-8">
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-blue-100 p-2 rounded-lg">
+                        <Shield className="w-6 h-6 text-blue-600" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold mb-2">
+                          Verified Profiles
+                        </h3>
+                        <p className="text-gray-700">
+                          All users are verified through ticket validation to
+                          ensure you're meeting real travelers.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-green-100 p-2 rounded-lg">
+                        <Clock className="w-6 h-6 text-green-600" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold mb-2">
+                          Real-Time Matching
+                        </h3>
+                        <p className="text-gray-700">
+                          Connect with people on the same train, same day. No
+                          more awkward small talk with strangers.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-purple-100 p-2 rounded-lg">
+                        <Heart className="w-6 h-6 text-purple-600" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold mb-2">
+                          Interest-Based Matching
+                        </h3>
+                        <p className="text-gray-700">
+                          Find people who share your hobbies, work in similar
+                          fields, or just love good conversation.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gray-100 rounded-2xl p-8 text-center">
+                  <Train className="w-24 h-24 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold mb-4">
+                    Turn Travel Time Into Social Time
+                  </h3>
+                  <p className="text-gray-700 mb-6">
+                    Whether it's a 2-hour commute or a cross-country adventure,
+                    make every journey memorable.
+                  </p>
+                  <button className="bg-blue-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-all">
+                    Start Your Journey
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Success Stories Section */}
+          <section className="py-16 bg-blue-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  Success Stories
+                </h2>
+                <p className="text-lg text-gray-600">
+                  Real connections made on real journeys
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="bg-white p-6 rounded-xl shadow-md">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                      <User className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">Sarah & Mike</h4>
+                      <p className="text-sm text-gray-500">
+                        London → Edinburgh
+                      </p>
+                    </div>
+                  </div>
+                  <p className="text-gray-600">
+                    "Met on the 8 AM train and ended up talking the entire
+                    4.5-hour journey. Now we're planning our next adventure
+                    together!"
+                  </p>
+                </div>
+                <div className="bg-white p-6 rounded-xl shadow-md">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                      <User className="w-6 h-6 text-green-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">James</h4>
+                      <p className="text-sm text-gray-500">Daily Commuter</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-600">
+                    "Turned my boring daily commute into the best part of my
+                    day. Made 3 close friends in my first month!"
+                  </p>
+                </div>
+                <div className="bg-white p-6 rounded-xl shadow-md">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                      <User className="w-6 h-6 text-purple-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">Emma & Lisa</h4>
+                      <p className="text-sm text-gray-500">
+                        Manchester → London
+                      </p>
+                    </div>
+                  </div>
+                  <p className="text-gray-600">
+                    "Both traveling for job interviews, we helped each other
+                    prepare and both got the jobs. Best travel companion ever!"
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Safety Section */}
+          <section
+            style={{ backgroundColor: "#99C1B1" }}
+            className="py-16 bg-white"
+          >
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  Your Safety Comes First
+                </h2>
+                <p className="text-lg text-gray-600">
+                  Built with comprehensive safety features for worry-free
+                  connections
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="text-center p-6 border border-gray-200 rounded-xl">
+                  <div className="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-6 h-6 text-red-600" />
+                  </div>
+                  <h3 className="font-semibold mb-2">ID Verification</h3>
+                  <p className="text-sm text-gray-600">
+                    All users verified with official ID and train tickets
+                  </p>
+                </div>
+                <div className="text-center p-6 border border-gray-200 rounded-xl">
+                  <div className="bg-yellow-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <AlertTriangle className="w-6 h-6 text-yellow-600" />
+                  </div>
+                  <h3 className="font-semibold mb-2">Report System</h3>
+                  <p className="text-sm text-gray-600">
+                    Easy reporting and blocking features for uncomfortable
+                    situations
+                  </p>
+                </div>
+                <div className="text-center p-6 border border-gray-200 rounded-xl">
+                  <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Eye className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h3 className="font-semibold mb-2">Profile Moderation</h3>
+                  <p className="text-sm text-gray-600">
+                    24/7 moderation team reviewing profiles and messages
+                  </p>
+                </div>
+                <div className="text-center p-6 border border-gray-200 rounded-xl">
+                  <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <MessageCircle className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="font-semibold mb-2">Safe Messaging</h3>
+                  <p className="text-sm text-gray-600">
+                    In-app messaging keeps personal info private until you're
+                    ready
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {error && (
+            <div className="mt-4 p-4 bg-red-50 border-l-4 border-red-400 rounded-lg">
+              <div className="flex">
+                <div className="text-red-700">
+                  <strong>Error:</strong> {error}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
