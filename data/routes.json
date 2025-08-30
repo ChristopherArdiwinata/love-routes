@@ -124,5 +124,14 @@
     "travelMode": "TRANSIT",
     "timestamp": "2025-08-30T15:56:48.424Z",
     "createdAt": "2025-08-30T15:56:48.905Z"
+  },
+  {
+    "id": "aba006be-e185-459c-a6b0-929896716737",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Redfern",
+    "destination": "Hurstville",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T16:11:24.260Z",
+    "createdAt": "2025-08-30T16:11:25.066Z"
   }
 ]
