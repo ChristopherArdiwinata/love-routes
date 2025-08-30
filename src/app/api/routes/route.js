@@ -3,12 +3,6 @@ import { findMatchesForRoute, initializeSystemFromFiles, getSystemStatus } from 
 
 export async function POST(request) {
   try {
-    // Ensure system is initialized
-    const status = getSystemStatus();
-    if (!status.initialized) {
-      await initializeSystemFromFiles();
-    }
-
     const { userId, startPoint, destination, travelMode, timestamp } = await request.json();
 
     if (!userId || !startPoint || !destination) {
@@ -25,31 +19,40 @@ export async function POST(request) {
 
     saveUserRoute(routeData);
 
-    // Find matches using the backend
-    try {
-      const matches = findMatchesForRoute(userId, startPoint, destination, 0.3, 10);
-
-      // Return the matches array
-      return Response.json({
-        success: true,
-        matches: matches,
-        totalMatches: matches.length,
-        message: `Found ${matches.length} potential matches for your route`
-      }, { status: 201 });
-
-    } catch (matchError) {
-      console.error('Error finding matches:', matchError);
-
-      return Response.json({
-        success: true,
-        matches: [],
-        totalMatches: 0,
-        message: 'Route saved but no matches found',
-        error: matchError.message
-      }, { status: 201 });
+    // Initialize the matching system if not already done
+    const systemStatus = getSystemStatus();
+    if (!systemStatus.initialized) {
+      const initSuccess = await initializeSystemFromFiles();
+      if (!initSuccess) {
+        return Response.json({
+          error: 'Failed to initialize matching system. Please ensure sydney_network_data.json and users.json are available.'
+        }, { status: 500 });
+      }
     }
-    
+
+    // Find matches using the backend matching system
+    // startPoint = start station, destination = end station for user1
+    const matches = findMatchesForRoute(userId, startPoint, destination, 0.3, 10);
+
+    // Convert matches to the format expected by frontend
+    const users = matches.map(match => ({
+      userId: match.userId,
+      name: match.name,
+      age: match.age,
+      email: match.email,
+      matchLevel: match.matchLevel,
+      routeOverlap: match.routeOverlap,
+      interestOverlap: match.interestOverlap,
+      startStation: match.startStation,
+      endStation: match.endStation,
+      userPath: match.userPath,
+      requestorPath: match.requestorPath
+    }));
+
+    return Response.json(users, { status: 201 });
+
   } catch (error) {
-    return Response.json({ error: error.message }, { status: 400 });
+    console.error('Error in route matching:', error);
+    return Response.json({ error: error.message }, { status: 500 });
   }
 }
