@@ -25,6 +25,12 @@ export default function Dashboard() {
             >
               Explore Maps
             </Link>
+            <Link 
+              href="/settings"
+              className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+            >
+              Settings
+            </Link>
           </div>
         </div>
       </main>
