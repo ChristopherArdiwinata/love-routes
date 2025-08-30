@@ -1,22 +1,30 @@
-import Link from 'next/link';
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <main className="text-center">
-        <h1 className="text-4xl font-bold mb-8">Love Routes</h1>
-        <p className="text-lg text-gray-600 mb-8">Thisis skeleteon app part</p>
-        
+        <div className="text-center mb-12">
+          <img
+            src="/general-img-landscape.png"
+            alt="Love Routes Logo"
+            className="w-34 h-34 mx-auto mb-8 rounded-lg"
+          />
+          <p className="text-gray-500 font-serif text-sm">
+            Welcome to Love Routes!
+          </p>
+        </div>
         <div className="flex gap-4 justify-center">
-          <Link 
+          <Link
             href="/auth/sign-in"
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="border-2 border-gray-600 text-gray-600 hover:text-gray-800 hover:bg-gray-50 font-medium py-2 px-4 rounded transition duration-200 ml-auto block"
           >
             Sign In
           </Link>
-          <Link 
+          <Link
             href="/auth/register"
-            className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+            className="border-2 border-gray-600 text-gray-600 hover:text-gray-800 hover:bg-gray-50 font-medium py-2 px-4 rounded transition duration-200 ml-auto block"
           >
             Register
           </Link>

@@ -61,5 +61,68 @@
     "travelMode": "TRANSIT",
     "timestamp": "2025-08-30T14:45:34.250Z",
     "createdAt": "2025-08-30T14:45:34.533Z"
+  },
+  {
+    "id": "5746dc61-98f3-40af-b323-fa7436152747",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Redfern",
+    "destination": "Hurstville",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T15:31:51.782Z",
+    "createdAt": "2025-08-30T15:31:52.260Z"
+  },
+  {
+    "id": "6b2bb83e-51d1-4316-93f4-0622415e01eb",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Redfern",
+    "destination": "Hurstville",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T15:50:02.875Z",
+    "createdAt": "2025-08-30T15:50:03.361Z"
+  },
+  {
+    "id": "e3e55d12-7aa4-4e79-97dd-7d11794237cc",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Lobby, 5/7 Central Ave, Eveleigh NSW 2015, Australia",
+    "destination": "UNSW Sydney, Sydney NSW, Australia",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T15:50:20.122Z",
+    "createdAt": "2025-08-30T15:50:20.594Z"
+  },
+  {
+    "id": "f01519a3-0f60-4a0c-8b9d-a207aa1dfe3a",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Redfern",
+    "destination": "Hurstville",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T15:50:36.079Z",
+    "createdAt": "2025-08-30T15:50:36.577Z"
+  },
+  {
+    "id": "0bf3bbd6-8485-4bcd-8684-e6a111ff4aac",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Redfern",
+    "destination": "Hurstville",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T15:50:46.358Z",
+    "createdAt": "2025-08-30T15:50:46.842Z"
+  },
+  {
+    "id": "ae1618a1-b0a2-4554-96f9-b1321b06637b",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Redfern",
+    "destination": "Hurstville",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T15:51:31.957Z",
+    "createdAt": "2025-08-30T15:51:32.431Z"
+  },
+  {
+    "id": "6dd98eda-ad1f-439f-9f5c-6f7c478f0679",
+    "userId": "106f5a9a-3c43-42e0-a4f9-f7aa72c95d00",
+    "startPoint": "Redfern",
+    "destination": "Hurstville",
+    "travelMode": "TRANSIT",
+    "timestamp": "2025-08-30T15:56:48.424Z",
+    "createdAt": "2025-08-30T15:56:48.905Z"
   }
 ]
